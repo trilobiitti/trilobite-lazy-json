@@ -10,6 +10,28 @@ This approach is mostly useful when parsing and/or allocation of nested objects/
 * Written in Common Kotlin, thus can be compiled for any of supported platforms (JVM, JS, native) without changes in behavior
 * Support customization for addition of new types of parsed objects
 
+## Installation
+
+Package is currently hosted on GitHub Packages repository <https://maven.pkg.github.com/trilobiitti/trilobite-lazy-json>.
+See detailed configuration guides for Gradle and Maven [here](https://docs.github.com/en/packages/guides/configuring-gradle-for-use-with-github-packages).
+
+After repository is configured the package can be added like this:
+```groovy
+kotlin {
+    // ...
+    sourceSets {
+        // ...
+        commonMain {
+            // ...
+            dependencies {
+                // ...
+                implementation('com.github.trilobiitti:trilobite-lazy-json:1.0')
+            }
+        }
+    }
+}
+```
+
 ## Usage
 
 Current implementation accepts input data as string only.
